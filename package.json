@@ -1,0 +1,73 @@
+{
+  "name": "web-stack",
+  "version": "1.0.0",
+  "description": "玩",
+  "main": "index.js",
+  "post": 8989,
+  "scripts": {
+    "start": "babel-node server"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "stage-2",
+      "react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangxiaofeid/web-stack.git"
+  },
+  "keywords": [
+    "node",
+    "react",
+    "socket"
+  ],
+  "author": "wxf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangxiaofeid/web-stack/issues"
+  },
+  "homepage": "https://github.com/wangxiaofeid/web-stack#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-import": "^1.1.1",
+    "babel-plugin-mobx-deep-action": "^1.5.2",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-react-jsx-self": "^6.22.0",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-es2015-ie": "^6.7.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-react-optimize": "^1.0.1",
+    "babel-preset-stage-2": "^6.22.0",
+    "browser-sync": "^2.18.8",
+    "less-loader": "^4.0.3",
+    "open": "^0.0.5",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.4.1",
+    "webpack-dev-middleware": "^1.10.2"
+  },
+  "dependencies": {
+    "antd": "^2.9.3",
+    "babel-register": "^6.24.1",
+    "express": "^4.15.2",
+    "mobx": "^3.1.9",
+    "mongoose": "^4.9.6",
+    "react-dom": "^15.5.4",
+    "socket.io": "^1.7.3",
+    "socket.io-client": "^1.7.3"
+  }
+}
