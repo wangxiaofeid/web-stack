@@ -1,0 +1,26 @@
+{
+  "name": "web-stack",
+  "description": "玩",
+  "main": "index.js",
+  "authors": [
+    "wxf"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "react",
+    "socket"
+  ],
+  "homepage": "https://github.com/wangxiaofeid/web-stack",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^4.8.0",
+    "d3-old": "d3#3.5.5"
+  }
+}

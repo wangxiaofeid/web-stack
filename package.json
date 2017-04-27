@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "玩",
   "main": "index.js",
-  "post": 8989,
+  "port": 8989,
   "scripts": {
     "start": "babel-node server"
   },
@@ -51,6 +51,7 @@
     "babel-preset-env": "^1.1.8",
     "babel-preset-es2015-ie": "^6.7.0",
     "babel-preset-react": "^6.23.0",
+    "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-react-optimize": "^1.0.1",
     "babel-preset-stage-2": "^6.22.0",
     "browser-sync": "^2.18.8",
@@ -58,14 +59,17 @@
     "open": "^0.0.5",
     "style-loader": "^0.16.1",
     "webpack": "^2.4.1",
-    "webpack-dev-middleware": "^1.10.2"
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-hot-middleware": "^2.18.0"
   },
   "dependencies": {
     "antd": "^2.9.3",
     "babel-register": "^6.24.1",
     "express": "^4.15.2",
+    "lodash": "^4.17.4",
     "mobx": "^3.1.9",
     "mongoose": "^4.9.6",
+    "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "socket.io": "^1.7.3",
     "socket.io-client": "^1.7.3"
