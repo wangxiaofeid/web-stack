@@ -1,15 +1,11 @@
 import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom';
-// import { browserHistory, Router } from 'react-router'
-// import configureStore from '../common/store/configureStore'
-// import App from '../common/containers/App'
-// import routes from '../common/routes/index'
-// import '../common/css/main.css'
-// import 'antd/dist/antd.css';
+import { browserHistory, Router } from 'react-router'
 
-// const preloadedState = {};
-// const store = configureStore(preloadedState)
+import routes from './router'
+import './style/index.less'
+
 const rootElement = document.getElementById('root')
 
 // const history = syncHistoryWithStore(browserHistory, store)
@@ -27,6 +23,6 @@ const rootElement = document.getElementById('root')
 // )
 
 ReactDOM.render(
-  <div>ooooooo</div>,
+  <Router history={browserHistory} routes={routes} />,
   rootElement
 )

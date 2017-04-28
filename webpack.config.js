@@ -1,6 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
-
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const clientBabel = {
   cacheDirectory: true,
@@ -50,6 +50,7 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
+    new ExtractTextPlugin('style.css'),
     // new webpack.optimize.OccurenceOrderPlugin(),
     // new webpack.HotModuleReplacementPlugin(),
     // new webpack.ResolverPlugin(
@@ -68,6 +69,53 @@ module.exports = {
           path.resolve(__dirname, './client')
         ],
         query: clientBabel
+      },
+      {
+        test: /\.less$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [{
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              modules: true,
+              localIdentName: '[local]',
+              minimize: false,
+              discardComments: { removeAll: true }
+            }
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              config: './postcss.config.js'
+            }
+          }, {
+            loader: 'less-loader',
+            options: {
+              sourceMap: true,
+              modifyVars: require('./client/themes.js')
+            }
+          }]
+        })
+      }, {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [{
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              modules: true,
+              localIdentName: '[local]',
+              minimize: false,
+              discardComments: { removeAll: true }
+            }
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              config: './postcss.config.js'
+            }
+          }]
+        })
       },
       {
         test: /\.est$/,
